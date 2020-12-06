@@ -1,13 +1,912 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-decoration:none;
+}
+@font-face{
+        font-family:"Quicksand";
+        src: url(./fonts/static/Quicksand-Regular.ttf);
+    }
+@font-face{
+        font-family:"BoldQuicksand";
+        src: url(./fonts/static/Quicksand-Bold.ttf);
+    }
+ @font-face{
+        font-family:"LightQuicksand";
+        src: url(./fonts/static/Quicksand-Light.ttf);
+    }
+@font-face{
+        font-family:"MediumQuicksand";
+        src: url(./fonts/static/Quicksand-Medium.ttf);
+    }
+ @font-face{
+        font-family:"SemiboldQuicksand";
+        src: url(./fonts/static/Quicksand-SemiBold.ttf);
+    }
+
+.f-bold{
+    font-family:"BoldQuicksand" 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    font-family:"Quicksand";
 }
+    
+#welcomer-section{
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+}
+
+nav{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav a{
+    padding: 15px;
+    margin-right: 60px;
+    font-family: "Quicksand";
+    font-size: 20px;
+    color: black;
+    border-bottom: 1px solid transparent;
+}
+
+nav a:hover{
+    color:#ff8381;
+    /* transition-duration: 0.5s;
+    font-size: 24px; */
+}
+
+.logo-box{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.logo-box img {
+    width: 95px;
+    height: 80px;
+}
+
+.mid-box {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    top: 16vh;
+    position: relative;
+    z-index: 2;
+}
+
+.left-box{
+    width: 50%;
+    height: 75%;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-box h1{
+    color: #000000;
+    font-size:65px;
+    font-weight: bolder;
+}
+
+.left-box p{
+    font-size: 25px;
+    color: #282828;
+}
+
+.right-box {
+    width: 50%;
+    height: 77%;
+    display: flex;
+    background-image: url(./img/hero-image2.PNG);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.right-box img{
+    width: 80%;
+    height: 100%;
+}
+
+#conocenos{
+    width: 100%;
+    height: 70vh;
+    background-image: url(./img/fondo1-1.png);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#conocenos h2{
+    font-weight: 400;
+    font-size: 35px;
+    color:#000000;
+}
+
+#clases{
+    width: 100%;
+    height: 100vh;
+}
+
+#clases h2{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.clases-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.clases-boxes{
+    width: 32%;
+    height: 100%;
+    border-radius: 5%;
+    background-color: #9b8e874a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clases-boxes img{
+    width: 80%;
+    height: 80%;
+}
+
+.description-clase{
+    width: 80%;
+    height: 20%;
+    margin: 20px;
+}
+
+.clases-boxes button{
+    width: auto;
+    height: auto;
+    background-color: #9b8e8700;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid;
+    margin: 18px 10px 25px 200px;
+}
+
+.clases-boxes button:hover{
+    background-color:#ff8381;
+    color: white;
+}
+
+#introduccion{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 50px;
+}
+
+.left-introduccion{
+    width: 50%;
+    height: 50%;
+}
+
+.left-introduccion video{
+    width: 90%;
+    height: 90%;
+    margin: 20px;
+}
+
+.right-introduccion{
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.right-introduccion h2{
+   font-size: 20px;
+   font-weight: normal; 
+}
+
+.right-introduccion p{
+    font-size: 18px;
+    font-weight: normal; 
+    margin-top: 25px;
+ }
+
+ .contenedor-redes{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color:#ffb9b9;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: absolute;
+    bottom: -10px;
+    /* right: -92%; */
+    
+ }
+
+ .contenedor-redes a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 5px 5px 10px;
+}
+
+
+ .contenedor-redes img{
+    width: 30px;
+    height: 30px;
+}
+
+
+#fundadoras{
+    width: 100%;
+    height: 65vh;
+    margin-top: 90px;
+    background-image: url(./img/fondo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fundadoras-title-box {
+    width: 12%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-fundadoras {
+    width: 270px;
+    height: 35px;
+    padding: 10px;
+    background-color: white;
+    transform: rotate(-90deg);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-fundadoras h2{
+    font-size: 30px;
+    font-weight: 400;
+    color: #535353;
+
+}
+
+.container-fotos-fundadoras {
+    width: 88%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fundadoras-boxes {
+    width: 18%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.fundadoras-boxes img{
+    width: 100%;
+    height: 60%;
+    border-radius: 50%;
+}
+
+.box-name-fundadoras{
+    width: 80%;
+    height: auto;
+    background-color: white;
+    margin:auto
+}
+
+.box-name-fundadoras h3{
+    font-size: 18px;
+    text-align: center;
+    color: #535353;
+    font-weight: 400;
+}
+
+#contacto {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    background-image: url(./img/matas.png);
+    background-repeat: no-repeat;
+    background-size: 70% 70%;
+    background-position: right;
+}
+
+.text-contacto {
+    width: 25%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-contacto h2{
+    color: #d5b09c;
+    font-size: 22px;
+}
+
+.text-contacto p{
+    margin: 10px 0px 10px 0px;
+}
+
+.formulario {
+    width: 40%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.formulario h2{
+    color: #d5b09c;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 70px;
+}
+
+.formulario input{
+    width: 80%;
+    height: 20px;
+    border: solid 1px gray;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.formulario textarea{
+    width: 80%;
+    border: solid 1px gray;
+    padding: 15px;
+    resize: none;
+    height: 145px;
+    margin: none !important;
+}
+
+.box-btn-enviar{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.btn-enviar{
+    width: auto !important;
+    height: auto  !important;
+    border-radius: 15px;
+    text-align: center;
+    position: absolute;
+    right: -30px;
+    margin-top: 20px;
+}
+
+.btn-enviar:hover{
+    cursor: pointer;
+    background-color: #ffd2b7;
+}
+
+.msg-footer{
+    width: 100%;
+    height: 25vh;
+    background-image: url(./img/fondo2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.msg-footer h3{
+    text-align: center;
+    font-size: 27px;
+    font-weight: normal;
+    margin:auto;
+}
+
+footer{
+    width: 100%;
+    /* height: 20vh;
+    margin-top: 20px; */
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.left-footer {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 24px;
+}
+
+.left-footer img{
+    width: 110px;
+    height: 90px;
+}
+
+.left-footer p{
+    font-size: 13px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.right-footer{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+
+.sections-footer{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sections-footer img{
+    width: 18px;
+    height: 18px;
+    margin: 4px 6px 0px 0px;
+}
+
+.sections-footer h4{
+   font-size: 17px;
+   color:rgb(75, 71, 71);
+   margin-bottom: 3px;
+}
+
+.sections-footer a{
+    font-size: 15px;
+    color:#726c6c;
+    margin: 3px 0px 3px 0px;
+ }
+
+ .boxes-social-footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 3px 0px 3px 0px;
+ }
+
+
+/**/
+
+.menu-hamburgesa-box{
+    width: 65%;
+    display: none;
+    justify-content: flex-end;
+}
+
+.menu{
+    display: none;
+}
+
+#btn-menu{
+    display: none;
+}
+
+
+ /*RESPONSIVE*/
+
+ @media only screen and (max-width: 780px) {
+    nav{
+        padding-left: 22px;
+    }
+    nav a {
+        padding: 0px;
+        font-size: 20px;
+    }
+
+    #conocenos{
+        height: 22vh;
+    }
+
+    #conocenos h2{
+        font-size: 22px;
+    }
+
+    #clases{
+        height: auto;
+    }
+
+    #fundadoras{
+        height: auto;
+    }
+    
+    .container-fotos-fundadoras{
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .fundadoras-boxes {
+        width: 35%;
+    }
+ }
+
+ @media only screen and (max-width: 550px) {
+    header {
+      position: relative;
+      z-index: 999;
+    }
+    
+    nav{
+        display: none;
+    }
+
+    .menu-hamburgesa-box{
+        display: flex;
+    }
+
+    .menu-hamburgesa-box label{
+        width: 50px;
+        height: 50px;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 999;
+    }
+    
+    .menu-hamburgesa-box label:hover{
+       cursor: pointer;
+       background-color: #53535373;
+    }
+    
+    .menu-hamburgesa-box img{
+        width: 25px;
+        height: 25px;
+    }
+
+    #welcomer-section{
+        height: auto;
+    }
+
+    .logo-box{
+        width: 35%;
+    }
+
+    .logo-box img{
+        width: 55px;
+        height: 40px;
+    }
+
+    .menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color:#ffd1b7f5;
+        z-index: 99;
+        justify-content: center;    
+        transition: ease-in-out;
+    }
+
+    .menu a {
+        font-size: 1em;
+        text-align: center;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        text-transform: uppercase;
+    }
+    .menu-hamburgesa-box label:hover > .menu{
+        margin: 0;
+        display: flex;
+     }
+
+    .menu a:hover{
+        background-color:#d5b09d;
+    }
+
+    #btn-menu:checked + .menu{
+        margin: 0;
+        display: flex;
+    }
+    
+    .mid-box{
+        top: 0;
+        height: 65vh;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mid-box h1{
+        font-size: 20px;
+    }
+
+    .mid-box p{
+        font-size: 13px;  
+        margin-top: 4px;
+    }
+
+    .left-box {
+        justify-content: start;
+        padding-left: 0;
+        text-align: center;
+        width: 60%;
+        height: 60%;
+    }
+
+    #conocenos{
+        height:18vh;
+        background-size: cover;
+    }
+
+    #conocenos h2{
+        font-size:11px;
+    }
+
+    #clases{
+        height: auto;
+    }
+
+    #clases h2{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .clases-container{
+        flex-direction: column;
+    }
+
+    .clases-boxes{
+        width: 75%;
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+    }
+
+    .clases-boxes img{
+        width: 60%;
+        height: 60%;
+    }
+
+    .clases-boxes button{
+        padding: 7px;
+        border-radius: 10px;
+        border: 1px solid;
+        margin: 0;
+        font-size: 9px;
+    }
+
+    #introduccion{
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0;
+    }
+
+    .left-introduccion video{
+        margin:20px 0px 0px 0px;
+        width: 100%;
+    }
+
+    .right-introduccion{
+        width: 100%;
+        height: auto;
+        justify-content: start;
+        text-align:center;
+    }
+
+    .right-introduccion p{
+        font-size: 14px;
+    }
+
+    .contenedor-redes {
+        width: 31%;
+        justify-content: center;
+        height: auto;
+        margin: 10px 0px 10px 0px;
+        position: relative;
+        /* bottom: 0px; */
+        right: -35%;
+        border-radius: 15px;
+    }
+
+    .contenedor-redes a {
+        width: 20px;
+        height: 20px;
+    }
+
+    .contenedor-redes img{
+        width: 15px;
+        height: 15px;
+    }
+
+    #fundadoras{
+        height: auto;
+    }
+
+    .container-fotos-fundadoras{
+        flex-wrap: wrap;
+        padding: 13px;
+    }
+
+    .fundadoras-boxes{
+        width: 35%;
+    }
+
+    /* .tittle-fundadoras{
+        width: auto !important;
+        height: auto  !important;
+        padding: 5px;
+    } */
+
+    .title-fundadoras h2 {
+        font-size: 18px;
+    
+    }
+
+    .box-name-fundadoras{
+        padding: 2px;
+    }
+
+    .box-name-fundadoras h3{
+        font-size: 10px;
+    }
+
+    .fundadoras-boxes{
+        margin-bottom: 10px;
+    }
+
+    #contacto{
+        height: auto;
+        flex-direction: column;
+        background-size: 100% 50%;
+        background-position: 100% 90%;
+    }
+    
+    .text-contacto{
+        margin-top: 15px;
+        height: auto;
+        width: 51%;
+    }
+
+    .text-contacto h2{
+        font-size: 15px;
+    }
+
+    .formulario {
+        height: auto;
+        width: 65%;
+        align-items: center;
+    }
+
+    .formulario h2{
+        margin-bottom: 20px;
+        margin-right: 0px;
+    }
+
+    .formulario input{
+        height: 4px;
+    }
+
+    .formulario textarea{
+        width: 80%;
+        height: auto;
+    }
+
+    .btn-enviar{
+        font-size: 10px;
+        right: -10%;
+    }
+
+    .msg-footer{
+        width: 94%;    
+        margin-top: 50px;
+        height: auto;
+        background-size: cover;
+        padding: 10px;
+        background-size: 180% 100%;
+        padding: 10px;
+        background-position: 51% 0%;
+    }
+
+    .msg-footer h3{    
+        margin-top: 0px;
+        font-size: 11px;
+    }
+
+    .left-footer{
+        width: 25%;
+    }
+
+    .left-footer img {
+        width: 50px;
+        height: 45px;
+    }
+
+    .left-footer p {
+        font-size: 7px;
+    }
+
+    .right-footer {
+        width: auto;
+    }
+
+    .sections-footer {
+        width: 35%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sections-footer h4{
+        font-size: 12px;
+    }
+
+    .sections-footer a{
+        font-size: 10px;
+        margin:0px 0px 3px 0px;
+    }
+
+    .sections-footer img{
+        width: 10px;
+        height: 10px;
+    }
+
+    .boxes-social-footer {
+        width: 82%;
+        height: auto;
+        display: flex;
+        margin: 0;
+    }
+
+  }
